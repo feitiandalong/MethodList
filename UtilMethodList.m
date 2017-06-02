@@ -127,7 +127,7 @@
 
 - (NSInteger)compareDate:(NSString*)aDate
 {
-    NSInteger aa;
+    NSInteger aa = 2;
     NSDateFormatter *dateformater = [[NSDateFormatter alloc] init];
     [dateformater setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     

@@ -1,4 +1,4 @@
-pod::Spec.new do |s|
+Pod::Spec.new do |s|
 s.name = 'MethodList'
 s.version = '1.0.0'
 s.license = 'MIT'
