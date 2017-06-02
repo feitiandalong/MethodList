@@ -106,14 +106,14 @@
 - (NSString *)currentTime{
     
     NSDateFormatter *dataFormatter = [[NSDateFormatter alloc] init];
-    [dataFormatter setDateFormat:@"MM月dd号"];
+    [dataFormatter setDateFormat:@"YYYY年MM月dd日"];
     NSString *strDate = [dataFormatter stringFromDate:[NSDate date]];
     //获取星期几
     NSDateComponents *componets = [[NSCalendar autoupdatingCurrentCalendar] components:NSCalendarUnitWeekday fromDate:[NSDate date]];
     NSInteger weekday = [componets weekday];//a就是星期几，1代表星期日，2代表星期一，后面依次
     NSArray *weekArray = @[@"星期天",@"星期一",@"星期二",@"星期三",@"星期四",@"星期五",@"星期六"];
     NSString *weekStr = weekArray[weekday-1];
-    return  [strDate stringByAppendingString:weekStr];
+    return  [weekStr stringByAppendingString:strDate];
 }
 
 // 获取当前的标准时间（不含星期几）
