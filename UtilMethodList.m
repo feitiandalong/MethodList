@@ -113,7 +113,7 @@
     NSInteger weekday = [componets weekday];//a就是星期几，1代表星期日，2代表星期一，后面依次
     NSArray *weekArray = @[@"周日",@"周一",@"周二",@"周三",@"周四",@"周五",@"周六"];
     NSString *weekStr = weekArray[weekday-1];
-    return  [weekStr stringByAppendingString:strDate];
+    return  [weekStr stringByAppendingString:[NSString stringWithFormat:@" %@",strDate]];
 }
 
 // 获取当前的标准时间（不含星期几）
